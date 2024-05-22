@@ -23,7 +23,7 @@
 
 @media (max-width: 600px){
     .form-ele{
-        width: 100vw;
+        width: auto;
     }
     .form-div input{
         width: 100%;
