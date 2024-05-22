@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="./forms.js"></script>
+</head>
+<body>
+
+<form onsubmit="return validate()" class="form" action="https://sheetdb.io/api/v1/bxchvj38irlvy" method="POST" id="sheetdb-form">
+<div class="form-ele">        
+    <div class="form-div">
+        <label for="uname">User Name</label>
+        <span style="color: red;">*</span><br>
+        <input type="text" id="uname" class="" name="data[Name]">
+        <div id="username" style="color: red;"></div>
+    </div>
+    <div class="form-div">
+        <label for="email">Email</label>
+        <span style="color: red;">*</span><br>
+        <input type="text" id="email" class="" name="data[Email]">
+        <div id="mail" style="color: red;"></div>
+    </div>
+    <div class="form-div">
+        <label for="number">Phone no.</label>
+        <span style="color: red;">*</span><br>
+        <input type="text" id="number" class="form-" name="data[Phone number]">
+        <div id="phnum" style="color: red;"></div>
+     </div>
+     <div class="form-div">
+        <label for="pwd">Password</label>
+        <span style="color: red;">*</span><br>
+        <input type="password" id="pwd" class="form-" name="data[Password]">
+        <div id="pass" style="color: red;"></div>
+    </div>
+    <div class="form-div">
+        <label for="cnf-pwd">confirm password</label>
+        <span style="color: red;">*</span><br>
+        <input type="password" id="cnf-pwd" class="form-" name="data[Confirm password]">
+        <div id="cnfpwd" style="color: red;"></div><br>
+    </div> 
+    <div class="form-div">  
+        <input type="submit" class="btn btn-primary" id="submit">
+    </div>
+</div>
+        <script>
+            var form = document.getElementById("sheetdb-form");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            if (validate()) {
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                }).then(() => {
+                    window.open('msg.html', '_self');
+                });
+            }
+        });
+        </script>
+
+    </form>
+</body>
+</html>

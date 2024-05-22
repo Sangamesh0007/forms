@@ -1,0 +1,31 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    background: radial-gradient(rgb(60, 255, 236),rgb(8, 0, 120));
+}
+.form-ele{
+    padding: 40px;
+    border: 8px solid rgb(9, 202, 255);
+    border-radius: 8%;
+    background-color: whitesmoke;
+    box-shadow: -20px -20px 10px 5px; 
+}
+
+.form-div{
+   padding: 12px;
+   font-family:Arial, Helvetica, sans-serif;
+}
+.form-div input{
+    width: 22vw;
+}
+
+@media (max-width: 600px){
+    .form-ele{
+        width: 100vw;
+    }
+    .form-div input{
+        width: 100%;
+    }  
+}
