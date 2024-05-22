@@ -8,13 +8,12 @@ body html{
     align-items: center;
     padding: 80px;
     background: radial-gradient(rgb(60, 255, 236),rgb(8, 0, 120));
-
 }
 .form-ele{
     padding: 40px;
     border: 8px solid rgb(9, 202, 255);
     border-radius: 8%;
-    background-color: whitesmoke;
+    background-color: rgb(47, 255, 238);
     box-shadow: -20px -20px 10px 5px; 
 }
 
@@ -27,8 +26,11 @@ body html{
 }
 
 @media (max-width: 600px){
+    .form{
+        height: 100vh;
+    }
     .form-ele{
-        width: auto;
+        width: 85vw;
     }
     .form-div input{
         width: 100%;
